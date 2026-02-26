@@ -1,0 +1,128 @@
+/* PAGE BACKGROUND */
+body {
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #0f172a;
+  font-family: "Inter", sans-serif;
+   
+}
+
+/* HERO PANEL */
+.hero {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.25);
+}
+
+.hero p {
+  opacity: .9;
+}
+
+.hero ul {
+  padding-left: 1.2rem;
+  opacity: .95;
+}
+
+.hero-pill {
+  background: rgba(255,255,255,.18);
+  padding: .35rem .9rem;
+  border-radius: 1000px;
+  font-size: .75rem;
+  letter-spacing: .3px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* FORM CARD */
+.form-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+  height: 100%;
+}
+
+/* INPUTS */
+.custom-input {
+  border-radius: .8rem;
+  border: 1px solid #e2e8f0;
+  padding: .75rem .9rem;
+  transition: .25s ease;
+}
+
+.custom-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99,102,241,.15);
+}
+
+/* LABEL */
+.form-label {
+  font-weight: 500;
+  color: #334155;
+}
+
+/* BUTTON */
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  border: none;
+  border-radius: .8rem;
+  padding: .75rem;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(79,70,229,.25);
+}
+
+/* LINK */
+a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #4f46e5;
+}
+
+/* ERROR TEXT */
+.text-danger {
+  font-size: .8rem;
+}
+
+/* ANIMATION (optional) */
+.animated-fade-up {
+  animation: fadeUp .6s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-pop {
+  animation: pop .5s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.delay-1 {
+  animation-delay: .2s;
+}
