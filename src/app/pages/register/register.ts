@@ -4,6 +4,7 @@ import { UserService } from '../../core/service/user-service';
 import { Router } from '@angular/router';
 import { IResponse } from '../../models/interface/IResponse';
 import { CommonModule } from '@angular/common';
+import { Auth } from '../../core/service/auth';
 
 @Component({
   selector: 'app-register',
@@ -14,6 +15,9 @@ import { CommonModule } from '@angular/common';
 export class Register {
   userSrv=inject(UserService);
   router=inject(Router);
+  authsrv=inject(Auth);
+  constructor() {
+  }
 
  userform: FormGroup = new FormGroup({
     userId: new FormControl(0),

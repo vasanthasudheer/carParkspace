@@ -4,7 +4,7 @@ import { UserService } from '../../core/service/user-service';
 import { IResponse } from '../../models/interface/IResponse';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +15,7 @@ import { RouterLink } from '@angular/router';
 export class Login {
   loginobj: login = new login();
   userSrv=inject(UserService);
+  router=inject(Router);
 
   constructor() {
   }
@@ -28,6 +29,12 @@ export class Login {
         console.log(res);
         alert(res.message);
         localStorage.setItem('user', JSON.stringify(res.data));
+        if(res.data.roleId==1){
+          this.router.navigate (['park-space']);
+        }else{
+          this.router.navigate(['my-vehicles']);
+        }
+
 
       },
       error:(err:any)=>{

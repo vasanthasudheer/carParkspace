@@ -4,12 +4,14 @@ import { Home } from './pages/home/home';
 import { About } from './pages/about/about';
 import { Login } from './pages/login/login';
 import { Register } from './pages/register/register';
-import { ParkingSpace } from './core/service/parking-space';
+
 import { OwnerListing } from './pages/owner-listing/owner-listing';
 import { SearchPlaces } from './pages/search-places/search-places';
 import { ParkingSpaceDetails } from './pages/parking-space-details/parking-space-details';
 import { SubscriptionPlan } from './pages/subscription-plan/subscription-plan';
-import { CustomerVehicles } from './pages/customer-vehicles';
+import { CustomerVehicles } from './pages/customer-vehicles/customer-vehicles';
+import { ParkingSpace } from './pages/parking-space/parking-space';
+ 
 
 export const routes: Routes = [
     {
@@ -28,7 +30,7 @@ export const routes: Routes = [
             },
 
             {
-                path: 'About',
+                path: 'about',
                 component: About
             },
             {
@@ -37,7 +39,7 @@ export const routes: Routes = [
             },
 
                     {
-                        path: 'register ',
+                        path: 'register',
                         component: Register 
                     },
                      {
@@ -49,14 +51,15 @@ export const routes: Routes = [
                 component:ParkingSpace
             },
             {
-                path:'owner-listing ',
+                path:'owner-listing',
                 component:OwnerListing
             },
             {
                 path:'find-parking',
                 component:SearchPlaces
-            },{
-                path:'parking-space-details/:parkingSpaceId',
+            },
+            {
+                path:'parking-space-details/:parkingSpaceId', 
                 component:ParkingSpaceDetails
             },
             {
