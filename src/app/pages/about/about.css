@@ -1,0 +1,44 @@
+body {
+  background: #f5f7fb;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0d6efd, #4f8cff);
+  color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.hero-pill {
+  background: rgba(255,255,255,.15);
+  padding: .35rem .9rem;
+  border-radius: 50rem;
+  font-size: .8rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  height: 100%;
+  transition: .3s;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+}
+
+.section-title {
+  font-weight: 600;
+}
+
+.table-like .row {
+  border-bottom: 1px solid #eee;
+}
+
+.cell {
+  padding: 1rem;
+}

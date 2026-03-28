@@ -1,0 +1,116 @@
+<main class="container py-5">
+
+  <!-- HERO -->
+  <section class="hero p-4 p-md-5 mb-4">
+    <span class="hero-pill">
+      <i class="bi bi-info-circle me-1"></i> What this portal is about
+    </span>
+
+    <h1 class="display-6 fw-bold">
+      <i class="bi bi-p-square-fill me-2"></i>
+      No-brokerage parking marketplace for city renters
+    </h1>
+
+    <p class="mb-0 opacity-75">
+      ParkSpace solves a practical city problem: rented flats without parking.
+      Owners list unused spaces and customers discover & book by area.
+    </p>
+  </section>
+
+  <div class="row g-4 mb-4">
+
+    <!-- MVP -->
+    <div class="col-lg-7">
+      <div class="info-card">
+
+        <h4 class="mb-3">
+          <i class="bi bi-stars me-2 text-primary"></i>
+          Core MVP capabilities
+        </h4>
+
+        <ul class="list-unstyled text-secondary mb-0">
+          <li><i class="bi bi-person-gear me-2 text-primary"></i> Role-based users</li>
+          <li><i class="bi bi-car-front me-2 text-primary"></i> Vehicle profile with size</li>
+          <li><i class="bi bi-geo-alt me-2 text-primary"></i> Space listings with pricing</li>
+          <li><i class="bi bi-eye me-2 text-primary"></i> Plan-based visibility</li>
+          <li><i class="bi bi-calendar-check me-2 text-primary"></i> Booking lifecycle</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- USERS -->
+    <div class="col-lg-5">
+      <div class="info-card">
+
+        <h4 class="mb-3">
+          <i class="bi bi-people-fill me-2 text-primary"></i>
+          Who uses it
+        </h4>
+
+        <p class="mb-2">
+          <strong><i class="bi bi-search me-1"></i> Customer:</strong>
+          Searches parking, adds vehicle, buys plan, books space.
+        </p>
+
+        <p class="mb-0">
+          <strong><i class="bi bi-building me-1"></i> Owner:</strong>
+          Posts spaces, uploads images, manages bookings.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ANGULAR MAPPING -->
+  <section>
+
+    <h2 class="section-title mb-3">
+      <i class="bi bi-diagram-3 me-2 text-primary"></i>
+      Suggested Angular page mapping
+    </h2>
+
+    <div class="table-like bg-white rounded-4 shadow-sm overflow-hidden">
+
+      <div class="row fw-semibold bg-light">
+        <div class="col-md-4 cell">Template</div>
+        <div class="col-md-4 cell">Route</div>
+        <div class="col-md-4 cell">API</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 cell">search-spaces.html</div>
+        <div class="col-md-4 cell text-primary">/spaces/search</div>
+        <div class="col-md-4 cell">parkSpaceParkingSpaces</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 cell">parking-space-details.html</div>
+        <div class="col-md-4 cell text-primary">/spaces/:id</div>
+        <div class="col-md-4 cell">view-parking-space</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 cell">subscription-plans.html</div>
+        <div class="col-md-4 cell text-primary">/plans</div>
+        <div class="col-md-4 cell">parkSpaceSubscriptionPlans</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 cell">owner-create-space.html</div>
+        <div class="col-md-4 cell text-primary">/owner/spaces/new</div>
+        <div class="col-md-4 cell">parkSpaceParkingSpaces</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 cell">bookings.html</div>
+        <div class="col-md-4 cell text-primary">/bookings</div>
+        <div class="col-md-4 cell">parkSpaceParkingBookings</div>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
