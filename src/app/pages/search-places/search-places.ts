@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ParkingspaceService } from '../../core/service/parkingspace-service';
@@ -92,3 +93,16 @@ export class SearchPlaces implements OnInit {
 
 
 
+=======
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-search-places',
+  imports: [],
+  templateUrl: './search-places.html',
+  styleUrl: './search-places.css',
+})
+export class SearchPlaces {
+
+}
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7

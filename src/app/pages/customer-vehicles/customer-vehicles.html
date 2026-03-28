@@ -2,7 +2,16 @@
  <main class="container py-4 py-md-5">
     <div class="row g-4">
       <div class="col-lg-5">
+<<<<<<< HEAD
         <form [formGroup]="vehicleForm">
+=======
+<form [formGroup]="vehicleForm"
+      (ngSubmit)="IsUpdate ? UpdateCuVehicle() : AddVehicle()">
+
+<button class="btn btn-primary" type="submit">
+  {{ IsUpdate ? 'Update Vehicle' : 'Save Vehicle' }}
+</button>
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
         <div class="form-card animated-fade-up">
           <h4 class="mb-3">Add New Vehicle</h4>
           <div class="row g-3">
@@ -21,7 +30,11 @@
             <div class="col-12">
                 <label class="form-label">Car Size</label>
                 <select class="form-select custom-select" formControlName="carSizeId">
+<<<<<<< HEAD
                    <option>Select Car size</option>
+=======
+                   <option [ngValue]="0">Select Car size</option>
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
                     @for(car of carList(); track $index){
                         <option [value]="car.carSizeId">{{car.sizeName}}</option>
                     }
@@ -29,12 +42,21 @@
                 </select>
             </div>
             <div class="col-12 d-grid">
+<<<<<<< HEAD
               @if(IsUpdate){
                  <button class="btn btn-primary" type="button" (click)="UpdateVehicle()">Update Vehicle</button>
               }
               @else{
                 <button class="btn btn-primary" type="button" (click)="AddVehicle()">Save Vehicle</button>
               }
+=======
+              <!-- @if(IsUpdate){
+                 <button class="btn btn-primary" type="submit" (click)="UpdateCuVehicle()">Update Vehicle</button>
+              }
+              @else{
+                <button class="btn btn-primary" type="submit" (click)="AddVehicle()">Save Vehicle</button>
+              } -->
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
                 
             </div>
           </div>
@@ -49,18 +71,29 @@
             <div class="row fw-semibold bg-light">
                 <div class="col-3 cell">Number</div><div class="col-3 cell">Brand</div><div class="col-2 cell">Model</div><div class="col-2 cell">Size</div><div class="col-2 cell">Action</div></div>
          
+<<<<<<< HEAD
            @for(veh of  vehiclesList();track $index){
+=======
+           @for(veh of vehiclesList();track $index){
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
            
                 <div class="row">
                 <div class="col-3 cell">{{veh.vehicleNumber}}</div>
                 <div class="col-3 cell">{{veh.vehicleBrand}}</div>
                 <div class="col-2 cell">{{veh.vehicleModel}}</div>
                 <div class="col-2 cell">{{veh.carSize}}</div>
+<<<<<<< HEAD
               <div class="col-2 cell d-flex gap-1">
   <button class="btn btn-primary btn-sm" type="button" (click)="OnEdit(veh.vehicleId)">Edit</button>
   <button class="btn btn-danger btn-sm" type="button" (click)="DeleteVehicle(veh.vehicleId)">Delete</button>
 </div>
             </div>
+=======
+<button class="btn btn-primary" type="button"
+        (click)="OnEdit(veh.vehicleId)">
+  Edit
+</button>            </div>
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
         }
           </div>
         </div>

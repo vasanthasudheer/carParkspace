@@ -4,21 +4,35 @@ import { Vehicles } from '../../core/service/customer/vehicles';
 import { Auth } from '../../core/service/auth';
 import { ParkingspaceService } from '../../core/service/parkingspace-service';
 import { BokkingSrv } from '../../core/service/customer/bokking-srv';
+<<<<<<< HEAD
 import { ActivatedRoute, RouterLink } from '@angular/router';
+=======
+import { ActivatedRoute } from '@angular/router';
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
 import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-parking-space-details',
+<<<<<<< HEAD
   imports: [ReactiveFormsModule  ],
+=======
+  imports: [ReactiveFormsModule,NgIf],
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
   templateUrl: './parking-space-details.html',
   styleUrl: './parking-space-details.css',
 })
 export class ParkingSpaceDetails implements OnInit {
 
 //spaceDetails=signal<any[]>([]);
+<<<<<<< HEAD
 spaceDetails  = signal<any | null>(null);
 VehList=signal<any[]>([]);
  
+=======
+spaceDetails = signal<any | null>(null);
+VehList=signal<any[]>([]);
+
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
 ParkingSpaceId:number=0;
 MonthlyPz:number =0; 
 

@@ -11,7 +11,11 @@ import { ParkingSpaceDetails } from './pages/parking-space-details/parking-space
 import { SubscriptionPlan } from './pages/subscription-plan/subscription-plan';
 import { CustomerVehicles } from './pages/customer-vehicles/customer-vehicles';
 import { ParkingSpace } from './pages/parking-space/parking-space';
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
 
 export const routes: Routes = [
     {
@@ -24,9 +28,15 @@ export const routes: Routes = [
                 redirectTo: 'home',
                 pathMatch: 'full'
             },
+<<<<<<< HEAD
             {
                 path: 'home',
                 component: Home
+=======
+            { 
+                path:'home',
+                component:Home
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
             },
 
             {
@@ -38,6 +48,7 @@ export const routes: Routes = [
                 component: Login
             },
 
+<<<<<<< HEAD
             {
                 path: 'register',
                 component: Register
@@ -75,3 +86,41 @@ export const routes: Routes = [
         ]
     }
 ];
+=======
+                    {
+                        path: 'register',
+                        component: Register 
+                    },
+                     {
+                path:'park-space',
+                component:ParkingSpace
+            },
+               {
+                path:'park-space/:id',
+                component:ParkingSpace
+            },
+            {
+                path:'owner-listing',
+                component:OwnerListing
+            },
+            {
+                path:'find-parking',
+                component:SearchPlaces
+            },
+            {
+                path:'parking-space-details/:parkingSpaceId', 
+                component:ParkingSpaceDetails
+            },
+            {
+                path:'my-vehicles',
+                component:CustomerVehicles
+            },
+            {
+                path:'subscription-plans',
+                component:SubscriptionPlan
+            }
+                ]
+            }
+        ];
+ 
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7

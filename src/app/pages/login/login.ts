@@ -28,7 +28,11 @@ export class Login {
       next:(res:IResponse)=>{
         console.log(res);
         alert(res.message);
+<<<<<<< HEAD
         localStorage.setItem('user', JSON.stringify(res.data  ));
+=======
+        localStorage.setItem('user', JSON.stringify(res.data));
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
         if(res.data.roleId==1){
           this.router.navigate (['park-space']);
         }else{

@@ -49,6 +49,7 @@ export class ParkingSpace implements OnInit,OnDestroy{
 
   }
   
+<<<<<<< HEAD
   // getParkingid() {
   //   let id =
   //     this.activatedroute.snapshot.paramMap.get('id');
@@ -99,11 +100,49 @@ export class ParkingSpace implements OnInit,OnDestroy{
           isAvailable: res.data.isAvailable,
           createdDate: res.data.createdDate
         });
+=======
+  getParkingid() {
+    let id =
+      this.activatedroute.snapshot.paramMap.get('id');
+    this.ParkingSpaceID_Ed = Number(id);
+    debugger;
+
+    if (this.ParkingSpaceID_Ed != 0) {
+      this.isEditmode = true;
+      //Read the values first and fill the controls with values
+      let s1 = this.http.GetParkingSpaceById(this.ParkingSpaceID_Ed).subscribe({
+        next: (res: IResponse) => {
+          debugger;
+          //  this.MonthlyPz = res.data.pricePerMonth;
+          //this.spaceDetails.set([res.data]);
+          this.parkSpaceForm.patchValue(res.data);
+        },
+        error: (err: any) => {
+
+        }
+      });
+
+      this.subscription.push(s1);
+    }
+    // alert(id);
+  }
+    ngOnInit(): void {
+    this.getParkingid();
+    this.parkSpaceForm.patchValue({
+  ownerId: 1
+  });
+
+   let s1= this.carhttp.getcarSizes().subscribe({
+      next: (res: IResponse) => {
+        debugger;
+        this.carList.set(res.data);
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
       }
     });
 
     this.subscription.push(s1);
   }
+<<<<<<< HEAD
 }
 ngOnInit(): void {
   this.loadCarSizes();
@@ -182,6 +221,48 @@ loadCarSizes() {
 
   this.subscription.push(s1);
 }
+=======
+
+  UpdateFormcontrols() {
+    let OwnerID = this.auths.getUserId() ; //getRoleId();
+    this.parkSpaceForm.patchValue({
+      ownerId: OwnerID
+    });
+  }
+ OnUpdate(){
+       this.UpdateFormcontrols();  //FOR OWNER ID UPDATIONS
+   let s1= this.http.UpdateParkingSpace(this.ParkingSpaceID_Ed,this.parkSpaceForm.value).subscribe({
+      next:(res:IResponse)=>{
+             debugger;
+             alert(res.message);
+            //  this.ResetForm();
+             //navigate to view my listing comp
+           this.router.navigateByUrl('/owner-listing');
+      },
+      error:(err:any)=>{
+
+      }
+    });
+    this.subscription.push(s1);
+     this.isEditmode=false;
+  }
+  OnSave() {
+    debugger;
+    this.UpdateFormcontrols();
+    const data = this.parkSpaceForm.value;
+   let s1= this.http.PostParkingSpace(data).subscribe({
+      next: (res: IResponse) => {
+        debugger;
+        alert(res.message);
+        // this.ResetForm();
+      },
+      error: (err: any) => {
+
+      }
+    });
+    this.subscription.push(s1);
+ }
+>>>>>>> 60c0c0c6ce7f742edac611dd431c76a1c02fe6e7
    ngOnDestroy(): void {
     this.subscription.forEach(s=>s.unsubscribe());
   }
